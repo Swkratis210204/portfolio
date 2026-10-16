@@ -1,412 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sokratis Giannoutsos | NLP & Machine Learning</title>
+<meta name="description" content="Sokratis-Vissarion Giannoutsos — researcher and teaching assistant, recent Informatics graduate of AUEB working on NLP and machine learning.">
+<link rel="canonical" href="https://swkratis210204.github.io/portfolio">
+<style>
+:root { --bg:#f6f6f3; --card:#fff; --ink:#16181d; --muted:#5f6674; --line:#e2e2dc; --accent:#1f4e8c; --soft:#e8eef7; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#0f1217; --card:#171b22; --ink:#eceef2; --muted:#98a0b0; --line:#272c36; --accent:#7fa8e0; --soft:#1b2638; }
+}
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
+main { max-width:820px; margin:0 auto; padding:40px 20px 64px; }
+a { color:var(--accent); }
+h1 { font-size:34px; line-height:1.15; margin:0 0 8px; }
+h3 { font-size:17px; margin:0; }
+p { margin:0 0 8px; }
+.muted { color:var(--muted); }
+.meta { color:var(--muted); font-size:14px; }
 
-    <!-- Primary SEO -->
-    <title>Sokratis Giannoutsos | Data Scientist & Software Developer</title>
-    <meta name="description" content="Portfolio of Sokratis-Vissarion Giannoutsos — Informatics graduate at AUEB, specializing in Machine Learning, Data Science and custom software development.">
-    <meta name="keywords" content="Sokratis Giannoutsos, Data Science, Machine Learning, Software Developer, AUEB, Python, Portfolio, Σωκράτης Γιαννούτσος">
-    <meta name="author" content="Sokratis-Vissarion Giannoutsos">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://swkratis210204.github.io/portfolio">
+/* header */
+.top { display:flex; gap:24px; align-items:center; }
+.photo { width:130px; height:130px; border-radius:50%; object-fit:cover; object-position:50% 80%; flex:none; }
+.tags { display:flex; flex-wrap:wrap; gap:8px; margin:12px 0; }
+.tag { background:var(--soft); color:var(--accent); font-size:14px; font-weight:600; padding:3px 12px; border-radius:99px; }
+.links { display:flex; flex-wrap:wrap; gap:4px 18px; }
+@media (max-width:560px) { .top { flex-direction:column; align-items:flex-start; } }
 
-    <!-- Open Graph (LinkedIn, WhatsApp, Facebook previews) -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://swkratis210204.github.io/portfolio">
-    <meta property="og:title" content="Sokratis Giannoutsos | Data Scientist & Software Developer">
-    <meta property="og:description" content="Informatics graduate at AUEB specializing in Machine Learning, Data Science and custom software development. Erasmus alumni at Stockholm University.">
-    <meta property="og:locale" content="el_GR">
-    <meta property="og:locale:alternate" content="en_US">
+/* sections */
+section { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:24px; margin-top:20px; }
+h2 { font-size:12px; text-transform:uppercase; letter-spacing:.12em; color:var(--accent); margin:0 0 18px; }
+.sub { font-size:13px; font-weight:700; color:var(--muted); margin:22px 0 12px; padding-bottom:6px; border-bottom:1px solid var(--line); }
+.sub:first-of-type { margin-top:0; }
+.item { margin-bottom:16px; }
+.item:last-child { margin-bottom:0; }
+ul { margin:6px 0 0; padding-left:20px; }
+.cols { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+@media (max-width:620px) { .cols { grid-template-columns:1fr; } }
 
-    <!-- Twitter / X Card -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Sokratis Giannoutsos | Data Scientist & Software Developer">
-    <meta name="twitter:description" content="Informatics graduate at AUEB specializing in Machine Learning, Data Science and custom software development.">
-
-    <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Sokratis-Vissarion Giannoutsos",
-      "alternateName": "Σωκράτης-Βησσαρίων Γιαννούτσος",
-      "url": "https://swkratis210204.github.io/portfolio",
-      "email": "swkratisgiannoutsos@gmail.com",
-      "telephone": "+306943480330",
-      "sameAs": [
-        "https://github.com/Swkratis210204",
-        "https://www.linkedin.com/in/sokratis-giannoutsos-190450258/"
-      ],
-      "jobTitle": "Data Scientist & Software Developer",
-      "alumniOf": [
-        {
-          "@type": "CollegeOrUniversity",
-          "name": "Athens University of Economics and Business"
-        },
-        {
-          "@type": "CollegeOrUniversity",
-          "name": "Stockholm University"
-        }
-      ],
-      "knowsAbout": ["Machine Learning", "Data Science", "Python", "Software Development", "NLP", "Deep Learning"],
-      "nationality": "Greek"
-    }
-    </script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>html { scroll-behavior: smooth; }</style>
+#lang { position:fixed; top:12px; right:12px; z-index:5; font:inherit; font-size:13px; cursor:pointer; background:var(--card); color:var(--ink); border:1px solid var(--line); border-radius:6px; padding:3px 9px; }
+</style>
 </head>
-<body class="bg-gray-50 text-gray-900 scroll-smooth">
+<body>
+<button id="lang" type="button">ΕΛ</button>
+<main>
 
-    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md border-b z-50">
-        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-end items-center">
-            <div class="flex items-center gap-6">
-                <div class="hidden md:flex space-x-6 text-sm font-medium">
-                    <a href="#about" class="hover:text-blue-600 transition" data-key="nav-about">About</a>
-                    <a href="#services" class="hover:text-blue-600 transition" data-key="nav-services">Services</a>
-                    <a href="#projects" class="hover:text-blue-600 transition" data-key="nav-projects">Projects</a>
-                    <!-- <a href="#athletics" class="hover:text-blue-600 transition" data-key="nav-athletics">Athletics</a> -->
-                    <a href="#contact" class="hover:text-blue-600 transition" data-key="nav-contact">Contact</a>
-                </div>
-                <button onclick="toggleLanguage()" class="bg-gray-100 px-3 py-1 rounded border text-xs font-bold hover:bg-gray-200 transition" id="langBtn">
-                    ΕΛΛΗΝΙΚΑ
-                </button>
-            </div>
-        </div>
-    </nav>
+<header class="top">
+  <img class="photo" src="photo.jpg" alt="Sokratis Giannoutsos">
+  <div>
+    <h1 data-el="Σωκράτης-Βησσαρίων Γιαννούτσος">Sokratis-Vissarion Giannoutsos</h1>
+    <p class="muted" data-el="Ερευνητής και Βοηθός Διδασκαλίας · NLP & Μηχανική Μάθηση · Αθήνα, Ελλάδα">Researcher and Teaching Assistant · NLP &amp; machine learning · Athens, Greece</p>
+    <div class="tags">
+      <span class="tag" data-el="Ερευνητής">Researcher</span>
+      <span class="tag" data-el="Βοηθός Διδασκαλίας">Teaching Assistant</span>
+      <span class="tag" data-el="Πρόσφατος απόφοιτος Πληροφορικής ΟΠΑ · 8.65/10">Recent Informatics graduate, AUEB · 8.65/10</span>
+      <span class="tag" data-el="Erasmus Στοκχόλμη">Erasmus Stockholm</span>
+    </div>
+    <div class="links">
+      <a href="mailto:swkratisgiannoutsos@gmail.com">Email</a>
+      <a href="https://github.com/Swkratis210204" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/sokratis-giannoutsos-190450258/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="sokratis_giannoutsos_cv.pdf" target="_blank" rel="noopener" data-el="Βιογραφικό (PDF)">CV (PDF)</a>
+    </div>
+  </div>
+</header>
 
-    <!-- PROFILE (About + Education + Credentials + Languages) -->
-    <section id="about" class="pt-32 pb-20 px-6 bg-white border-b">
-        <div class="max-w-5xl mx-auto">
+<section>
+  <h2 data-el="Επαγγελματική εμπειρία">Professional experience</h2>
 
-            <!-- Hero -->
-            <div class="mb-16">
-                <h1 class="text-5xl font-extrabold mb-4" data-key="hero-name">Sokratis-Vissarion Giannoutsos</h1>
-                <p class="text-xl text-gray-600 mb-6 max-w-2xl" data-key="hero-desc">
-                    Informatics graduate at Athens University of Economics and Business. Focused on Data Analysis and Data Science, Machine Learning and building custom software solutions.
-                </p>
-                <a href="#contact" class="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition inline-block" data-key="btn-contact">Contact Me</a>
-            </div>
+  <div class="item">
+    <h3 data-el="Ερευνητικός Εκπαιδευόμενος · Μονάδα Έρευνας Αρχιμήδης, Ε.Κ. «Αθηνά»">Research Intern · Archimedes Research Unit, Athena RC</h3>
+    <div class="meta" data-el="Νοέμβριος – Δεκέμβριος 2026 · Αθήνα">November – December 2026 · Athens</div>
+    <p data-el="Με την Επιτροπή Κεφαλαιαγοράς: αυτοματοποιημένα pipelines ταξινόμησης NLP που εντοπίζουν και επισημαίνουν παράνομες πλατφόρμες χρηματοοικονομικών συμβουλών.">In partnership with the Hellenic Capital Market Commission: automated NLP classification pipelines that detect and flag illegal financial advisory platforms.</p>
+  </div>
 
-            <hr class="border-gray-100 mb-16">
+  <div class="item">
+    <h3 data-el="Βοηθός Διδασκαλίας · ΟΠΑ, Μεταπτυχιακό στην Επιστήμη των Δεδομένων">Teaching Assistant · AUEB, Master's in Data Science</h3>
+    <div class="meta" data-el="Οκτώβριος 2026 – σήμερα · Αθήνα">October 2026 – present · Athens</div>
+    <p data-el="Practical Data Science, με επιβλέποντα τον καθηγητή Ιωάννη Παυλόπουλο: εργαστήρια, διαλέξεις, εργασίες και βαθμολόγηση.">Practical Data Science, under Prof. John Pavlopoulos: labs and lectures, homework assignments and grading.</p>
+  </div>
 
-            <!-- Education -->
-            <div class="mb-16">
-                <h2 class="text-2xl font-bold mb-8" data-key="edu-title">Education</h2>
-                <div class="space-y-8">
-                    <div class="flex gap-5 items-start">
-                        <div class="text-3xl">🎓</div>
-                        <div>
-                            <h3 class="text-lg font-bold" data-key="edu1-name">Athens University of Economics and Business</h3>
-                            <p class="text-gray-500 text-sm mb-1" data-key="edu1-degree">B.Sc. in Informatics —  Grade: 8.71/10</p>
-                            <p class="text-gray-400 text-xs" data-key="edu1-date">October 2022 – July 2026 · Athens, Greece</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-5 items-start">
-                        <div class="text-3xl">🎓</div>
-                        <div>
-                            <h3 class="text-lg font-bold" data-key="edu2-name">Stockholm University — Erasmus Exchange</h3>
-                            <p class="text-gray-500 text-sm mb-1" data-key="edu2-degree">Department of Computer Science — Grade: Β</p>
-                            <p class="text-gray-400 text-xs" data-key="edu2-date">January 2025 – June 2025 · Stockholm, Sweden</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div class="item">
+    <h3 data-el="Ερευνητής · Εργαστήριο MLH ΟΠΑ">Researcher · AUEB MLH Lab</h3>
+    <div class="meta" data-el="Ιούνιος – Οκτώβριος 2026 · Αθήνα">June – October 2026 · Athens</div>
+    <ul>
+      <li data-el="<b>Polarized Trees:</b> αλγόριθμος βασισμένος σε δέντρα απόφασης για τον εντοπισμό πολυφωνίας ανάμεσα σε κοινωνικο-δημογραφικές ταυτότητες, μαζί με πλαίσιο παραγωγής συνθετικών δεδομένων για την επαλήθευση της ανάκτησης της πόλωσης. Από αυτό προέκυψε το πακέτο ανοιχτού κώδικα <a href='https://pypi.org/project/polartox/' target='_blank' rel='noopener'>PolarTox</a>.">
+        <b>Polarized Trees:</b> a decision tree–based algorithm for identifying polyphony across socio-demographic identities, with a synthetic data generation framework for validating polarization recovery. This work resulted in the open-source Python package <a href="https://pypi.org/project/polartox/" target="_blank" rel="noopener">PolarTox</a>.
+      </li>
+      <li data-el="<b>Ανίχνευση προκατάληψης σε LLM:</b> επέκταση της προπτυχιακής μου διπλωματικής σε συνεχιζόμενο ερευνητικό έργο. Εντοπισμός και απόδοση της πόλωσης σε κοινωνικο-δημογραφικές υποομάδες και αξιολόγηση της ευθυγράμμισης των LLM με τις κρίσεις ανθρώπων ανά υποομάδα, με προεπιλεγμένα και persona-conditioned prompts.">
+        <b>LLM Bias Detection:</b> extended my undergraduate thesis into an ongoing research project. Identified and attributed polarization in texts to socio-demographic subgroups, then evaluated LLM alignment with subgroup-specific human judgments under default and persona-conditioned prompting.
+      </li>
+    </ul>
+  </div>
+</section>
 
-            <hr class="border-gray-100 mb-16">
+<section>
+  <h2 data-el="Πανεπιστημιακά & προσωπικά projects">University &amp; personal projects</h2>
 
-            <!-- Certifications + Languages -->
-            <div class="grid md:grid-cols-2 gap-12">
-                <div>
-                    <h2 class="text-2xl font-bold mb-8" data-key="cred-cert-title">Certifications</h2>
-                    <div class="space-y-6">
-                        <div class="flex gap-4 items-start">
-                            <div class="text-2xl">🏅</div>
-                            <div>
-                                <p class="font-bold" data-key="cert1-t">Microsoft Azure Data Fundamentals (DP-900)</p>
-                                <p class="text-sm text-gray-500" data-key="cert1-d">Microsoft · 2025</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4 items-start">
-                            <div class="text-2xl">🏅</div>
-                            <div>
-                                <p class="font-bold" data-key="cert2-t">Seed for the Future Alumni</p>
-                                <p class="text-sm text-gray-500" data-key="cert2-d">Huawei · 2023</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h2 class="text-2xl font-bold mb-8" data-key="cred-lang-title">Languages</h2>
-                    <div class="space-y-6">
-                        <div class="flex gap-4 items-start">
-                            <div class="text-2xl">🇬🇷</div>
-                            <div>
-                                <p class="font-bold" data-key="lang1-t">Greek</p>
-                                <p class="text-sm text-gray-500" data-key="lang1-d">Native</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4 items-start">
-                            <div class="text-2xl">🇬🇧</div>
-                            <div>
-                                <p class="font-bold" data-key="lang2-t">English</p>
-                                <p class="text-sm text-gray-500" data-key="lang2-d">C2 — Full Professional</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div class="sub" data-el="Μηχανική Μάθηση, AI & Ανάκτηση Πληροφορίας">Machine Learning, AI &amp; Information Retrieval</div>
+  <div class="item">
+    <h3 data-el="Semantic & Hybrid Information Retrieval System">Semantic &amp; Hybrid Information Retrieval System</h3>
+    <p data-el="Ολοκληρωμένο σύστημα που συνδυάζει BM25, Sentence Transformers, FAISS και hybrid re-ranking πάνω από 18.000+ έγγραφα.">End-to-end hybrid retrieval system combining BM25, Sentence Transformers, FAISS and hybrid re-ranking over 18,000+ documents.</p>
+  </div>
+  <div class="item">
+    <h3>IMDb Sentiment Analysis</h3>
+    <p data-el="Κλασικά (Logistic Regression, AdaBoost) και βαθιά (LSTM) μοντέλα ανάλυσης συναισθήματος, με προσαρμοσμένη προεπεξεργασία κειμένου.">Classical (Logistic Regression, AdaBoost) and deep learning (LSTM) sentiment analysis models with custom text preprocessing pipelines.</p>
+  </div>
+  <div class="item">
+    <h3>TrailGame</h3>
+    <p data-el="AI παιχνιδιού με Minimax και Alpha-Beta pruning, προσαρμοσμένες ευρετικές και αλγορίθμους λογικής συλλογιστικής.">Competitive game AI using Minimax with Alpha-Beta pruning, custom heuristics and logical reasoning algorithms.</p>
+  </div>
 
-        </div>
-    </section>
+  <div class="sub" data-el="Μηχανική Λογισμικού">Software Engineering</div>
+  <div class="item">
+    <h3>xChange</h3>
+    <p data-el="Android marketplace ανταλλαγής αντικειμένων μεταξύ χρηστών, με προφίλ, προγραμματισμό και διαχείριση δεδομένων offline-first.">Android marketplace for peer-to-peer item exchanges, with user profiles, scheduling and offline-first data management.</p>
+  </div>
+  <div class="item">
+    <h3>UniWingman</h3>
+    <p data-el="Android πλατφόρμα για φοιτητές με εξατομικευμένα dashboards, διαδραστικούς χάρτες, αναζήτηση και καταλόγους υπηρεσιών, με chatbot που συνδυάζει keyword matching και RAG.">Android student platform with personalized dashboards, interactive maps, search and student utility directories, integrating a hybrid keyword-matching and RAG chatbot.</p>
+  </div>
+</section>
 
-    <!-- SERVICES -->
-    <section id="services" class="py-20 bg-gray-50 px-6 border-b">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl font-bold mb-10" data-key="services-title">Services</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-6 bg-white rounded-xl border border-transparent hover:border-blue-100 transition">
-                    <div class="text-blue-600 text-2xl mb-4">🌐</div>
-                    <h3 class="font-bold mb-2" data-key="s1-t">Websites & Webapps</h3>
-                    <p class="text-sm text-gray-600" data-key="s1-d">Custom, fast and mobile-friendly web solutions for businesses and individuals.</p>
-                </div>
-                <div class="p-6 bg-white rounded-xl border border-transparent hover:border-blue-100 transition">
-                    <div class="text-blue-600 text-2xl mb-4">📊</div>
-                    <h3 class="font-bold mb-2" data-key="s2-t">Data Management</h3>
-                    <p class="text-sm text-gray-600" data-key="s2-d">Database integration, management and designing efficient search systems.</p>
-                </div>
-                <div class="p-6 bg-white rounded-xl border border-transparent hover:border-blue-100 transition">
-                    <div class="text-blue-600 text-2xl mb-4">💡</div>
-                    <h3 class="font-bold mb-2" data-key="s3-t">Business Insights</h3>
-                    <p class="text-sm text-gray-600" data-key="s3-d">Turning raw data into actionable insights through statistical analysis and reporting.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section>
+  <h2 data-el="Σπουδές & δεξιότητες">Education &amp; skills</h2>
+  <div class="cols">
+    <div>
+      <div class="sub" data-el="Σπουδές">Education</div>
+      <div class="item">
+        <h3 data-el="Οικονομικό Πανεπιστήμιο Αθηνών">Athens University of Economics and Business</h3>
+        <div class="meta" data-el="Πτυχίο Πληροφορικής · Οκτ 2022 – Ιούν 2026 · Βαθμός 8.65/10">B.Sc. in Informatics · Oct 2022 – Jun 2026 · GPA 8.65/10</div>
+      </div>
+      <div class="item">
+        <h3 data-el="Πανεπιστήμιο Στοκχόλμης (Erasmus)">Stockholm University (Erasmus Exchange)</h3>
+        <div class="meta" data-el="Τμήμα Επιστήμης Υπολογιστών · Ιαν – Ιούν 2025">Department of Computer Science · Jan – Jun 2025</div>
+        <div class="meta" data-el="Μαθήματα μεταπτυχιακού προγράμματος · Βαθμός: B">Master's programme courses · Grade: B</div>
+      </div>
+    </div>
+    <div>
+      <div class="sub" data-el="Τεχνικές δεξιότητες">Technical skills</div>
+      <p><b data-el="Γλώσσες προγραμματισμού:">Programming languages:</b> Java, Python, C/C++, SQL, JavaScript, HTML/CSS, R</p>
+      <p><b data-el="ML & Δεδομένα:">ML &amp; data:</b> PyTorch, Scikit-learn, NumPy, Pandas, FAISS, Elasticsearch</p>
+      <p><b data-el="Frameworks & Εργαλεία:">Frameworks &amp; tools:</b> React, Flask, Android Studio, Git, Postman, REST APIs, Unix/Linux, Azure, MLflow</p>
+      <p><b data-el="Γλώσσες:">Languages:</b> <span data-el="Ελληνικά (μητρική), Αγγλικά (C2)">Greek (native), English (C2 — full professional)</span></p>
+    </div>
+  </div>
+</section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="py-20 px-6 bg-white border-b">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl font-bold mb-10" data-key="projects-title">Technical Projects</h2>
-            <div class="space-y-12">
-                <div class="group border-l-4 border-gray-200 pl-6 hover:border-blue-500 transition">
-                    <h3 class="text-2xl font-bold">A Posteriori Unimodality for LLM Bias Detection</h3>
-                    <p class="text-sm text-gray-500 mb-2">Python, Pandas, NLP | 2025/2026</p>
-                    <p class="text-gray-600" data-key="p1-d">Research on toxicity-related polarization and structural bias across modern Large Language Models (LLMs) like GPT-4, Gemini and Llama.</p>
-                </div>
-                <div class="group border-l-4 border-gray-200 pl-6 hover:border-blue-500 transition">
-                    <h3 class="text-2xl font-bold">IMDB Sentiment Analysis</h3>
-                    <p class="text-sm text-gray-500 mb-2">Python, PyTorch, Scikit-learn</p>
-                    <p class="text-gray-600" data-key="p3-d">Built and compared artificial intelligence models for classification using Logistic Regression, AdaBoost and LSTM deep learning models.</p>
-                </div>
-                <div class="group border-l-4 border-gray-200 pl-6 hover:border-blue-500 transition">
-                    <h3 class="text-2xl font-bold">Semantic & Hybrid Information Retrieval</h3>
-                    <p class="text-sm text-gray-500 mb-2">Python, ElasticSearch, FAISS | 2025</p>
-                    <p class="text-gray-600" data-key="p2-d">Developed a high-performance system for keyword and conceptual matching across 18,000+ documents.</p>
-                </div>
-                <div class="group border-l-4 border-gray-200 pl-6 hover:border-blue-500 transition">
-                    <h3 class="text-2xl font-bold">xChange: Mobile Item Swapping</h3>
-                    <p class="text-sm text-gray-500 mb-2">Java, Android Studio | 2024</p>
-                    <p class="text-gray-600" data-key="p5-d">Designed a sustainability-focused trading platform for zero-money exchanges with full offline support.</p>
-                </div>
-                <div class="group border-l-4 border-gray-200 pl-6 hover:border-blue-500 transition">
-                    <h3 class="text-2xl font-bold">UniWingman: Personal Uni Assistant</h3>
-                    <p class="text-sm text-gray-500 mb-2">Android Studio, Java, RAG Architecture | 2025</p>
-                    <p class="text-gray-600" data-key="p6-d">All-in-one student app featuring Grade tracking, daily scheduling and interactive campus maps. Includes dual AI chatbots: one using RAG for document queries and one for JSON-based information retrieval.</p>
-                </div>
-                <div class="group border-l-4 border-gray-200 pl-6 hover:border-blue-500 transition">
-                    <h3 class="text-2xl font-bold">TrailGame: 2D Strategy AI</h3>
-                    <p class="text-sm text-gray-500 mb-2">Java, AI Algorithms | 2024</p>
-                    <p class="text-gray-600" data-key="p4-d">Developed game with AI using Minimax algorithm with Alpha-Beta pruning and automated reasoning engines.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section>
+  <h2 data-el="Πιστοποιήσεις & ακαδημαϊκές δραστηριότητες">Certifications &amp; academic activities</h2>
+  <div class="cols">
+    <div>
+      <div class="sub" data-el="Πιστοποιήσεις">Certifications</div>
+      <div class="item"><h3>Microsoft Azure Data Fundamentals (DP-900)</h3><div class="meta" data-el="Ιούλιος 2025">July 2025</div></div>
+      <div class="item"><h3 data-el="Huawei Seeds for the Future — Απόφοιτος">Huawei Seeds for the Future — Alumnus</h3><div class="meta" data-el="Νοέμβριος 2023">November 2023</div></div>
+    </div>
+    <div>
+      <div class="sub" data-el="Ακαδημαϊκές δραστηριότητες">Academic activities</div>
+      <div class="item"><h3 data-el="AUEB GenZ Buddies — Μέλος">AUEB GenZ Buddies — Member</h3><div class="meta" data-el="Οκτώβριος 2026 – σήμερα">October 2026 – present</div></div>
+      <div class="item"><h3 data-el="AthNLP — Εθελοντής προετοιμασίας και διδασκαλίας εργαστηρίων">AthNLP — Lab teaching &amp; preparation volunteer</h3><div class="meta" data-el="Σεπτέμβριος 2026">September 2026</div></div>
+      <div class="item"><h3 data-el="16th Lisbon Machine Learning School (LxMLS) — Φοιτητής">16th Lisbon Machine Learning School (LxMLS) — Student</h3><div class="meta" data-el="Ιούλιος 2026 · Λισαβόνα">July 2026 · Lisbon</div></div>
+    </div>
+  </div>
+</section>
 
-    <!-- ATHLETICS
-    <section id="athletics" class="py-20 bg-black text-white px-6">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl font-bold mb-10" data-key="ath-title">Professional Athletics</h2>
-            <div class="grid md:grid-cols-2 gap-10">
-                <p class="text-lg leading-relaxed text-gray-300" data-key="ath-desc">
-                    Parallel to my studies, I am a semi-professional Table Tennis player and coach. This background drives my discipline, competitive edge and ability to perform under pressure.
-                </p>
-                <ul class="space-y-4">
-                    <li class="flex items-center gap-3">🏆 3x National Champion in youth all youth categories (U12/U15/U19 Singles)</li>
-                    <li class="flex items-center gap-3">🏆 Europe Trophy Winner (Olympiacos)</li>
-                    <li class="flex items-center gap-3">🥈 U21 National Second Place</li>
-                    <li class="flex items-center gap-3">🥉 Mediterranean Games Bronze Medalist (U15)</li>
-                    <li class="flex items-center gap-3">🥉 5x Balkan Championships Bronze Medalist (U19)</li>
-                    <li class="flex items-center gap-3">🏓 2X Greek Champion & Cup Winner (Olympiacos)</li>
-                </ul>
-            </div>
-        </div>
-    </section> -->
+<section>
+  <h2 data-el="Επιτραπέζια αντισφαίριση">Table tennis</h2>
+  <p data-el="Επαγγελματίας αθλητής μέχρι το 2024, και από τότε προπονητής.">Professional athlete until 2024, and a coach since then.</p>
+  <ul>
+    <li data-el="3× Πρωταθλητής Ελλάδας στο ατομικό, πολλαπλός Πρωταθλητής Ελλάδας στο διπλό">3× National Champion in singles, multiple-time National Champion in doubles</li>
+    <li data-el="Πρωταθλητής και Κυπελλούχος Ελλάδας με τον Ολυμπιακό">Greek League Champion and Cup Winner with Olympiacos</li>
+    <li data-el="Europe Trophy με τον Ολυμπιακό">Europe Trophy winner with Olympiacos</li>
+    <li data-el="5× χάλκινο μετάλλιο στα Βαλκανικά Πρωταθλήματα (ατομικό, διπλό, ομαδικό) και χάλκινο στους Μεσογειακούς Αγώνες (ομαδικό)">5× Balkan Championships bronze medalist (singles, doubles, teams) and Mediterranean Games bronze medalist in team event</li>
+  </ul>
+</section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="py-20 bg-white px-6 border-t">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl font-bold mb-4" data-key="contact-title">Contact</h2>
-            <p class="text-gray-500 mb-10 max-w-xl" data-key="contact-desc">Feel free to reach out via email or connect with me on LinkedIn and GitHub.</p>
-            <div class="flex flex-col sm:flex-row gap-6">
-                <a href="mailto:swkratisgiannoutsos@gmail.com" class="flex items-center gap-4 p-5 bg-gray-50 rounded-xl border hover:border-blue-300 hover:bg-blue-50 transition group">
-                    <div class="text-2xl">✉️</div>
-                    <div>
-                        <p class="text-xs text-gray-400 uppercase tracking-widest mb-1" data-key="contact-email-label">Email</p>
-                        <p class="font-semibold text-gray-800 group-hover:text-blue-600 transition text-sm">swkratisgiannoutsos@gmail.com</p>
-                    </div>
-                </a>
-                <a href="https://www.linkedin.com/in/sokratis-giannoutsos-190450258/" target="_blank" rel="noopener" class="flex items-center gap-4 p-5 bg-gray-50 rounded-xl border hover:border-blue-300 hover:bg-blue-50 transition group">
-                    <div class="text-2xl">💼</div>
-                    <div>
-                        <p class="text-xs text-gray-400 uppercase tracking-widest mb-1">LinkedIn</p>
-                        <p class="font-semibold text-gray-800 group-hover:text-blue-600 transition text-sm">sokratis-giannoutsos</p>
-                    </div>
-                </a>
-                <a href="https://github.com/Swkratis210204" target="_blank" rel="noopener" class="flex items-center gap-4 p-5 bg-gray-50 rounded-xl border hover:border-blue-300 hover:bg-blue-50 transition group">
-                    <div class="text-2xl">🐙</div>
-                    <div>
-                        <p class="text-xs text-gray-400 uppercase tracking-widest mb-1">GitHub</p>
-                        <p class="font-semibold text-gray-800 group-hover:text-blue-600 transition text-sm">Swkratis210204</p>
-                    </div>
-                </a>
-                <a href="tel:+306943480330" class="flex items-center gap-4 p-5 bg-gray-50 rounded-xl border hover:border-blue-300 hover:bg-blue-50 transition group">
-                    <div class="text-2xl">📞</div>
-                    <div>
-                        <p class="text-xs text-gray-400 uppercase tracking-widest mb-1" data-key="contact-phone-label">Phone</p>
-                        <p class="font-semibold text-gray-800 group-hover:text-blue-600 transition text-sm">+30 694 348 0330</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
+</main>
 
-    <footer class="py-10 text-center text-gray-400 text-xs border-t">
-        <p data-key="footer">© 2026 Sokratis Giannoutsos. Professional Portfolio.</p>
-    </footer>
-
-    <script>
-        window.scrollTo(0, 0);
-
-        const translations = {
-            en: {
-                "nav-about": "About",
-                "nav-services": "Services",
-                "nav-projects": "Projects",
-                "nav-athletics": "Athletics",
-                "nav-contact": "Contact",
-                "hero-name": "Sokratis-Vissarion Giannoutsos",
-                "hero-desc": "Informatics graduate at Athens University of Economics and Business. Focused on Data Analysis and Data Science, Machine Learning and building custom software solutions.",
-                "btn-contact": "Contact Me",
-                "edu-title": "Education",
-                "edu1-name": "Athens University of Economics and Business",
-                "edu1-degree": "B.Sc. in Informatics — Grade: 8.71/10",
-                "edu1-date": "October 2022 – July 2026 · Athens, Greece",
-                "edu2-name": "Stockholm University — Erasmus Exchange",
-                "edu2-degree": "Department of Computer Science — Grade: B",
-                "edu2-date": "January 2025 – June 2025 · Stockholm, Sweden",
-                "services-title": "Services",
-                "s1-t": "Websites & Webapps",
-                "s1-d": "Custom, fast and mobile-friendly web solutions for businesses and individuals.",
-                "s2-t": "Data Management",
-                "s2-d": "Database integration, management and designing efficient search systems.",
-                "s3-t": "Business Insights",
-                "s3-d": "Turning raw data into actionable insights through statistical analysis and reporting.",
-                "projects-title": "Technical Projects",
-                "p1-d": "Research on toxicity-related polarization and structural bias across modern Large Language Models (LLMs) like GPT-4, Gemini and Llama.",
-                "p2-d": "Developed a high-performance system for keyword and conceptual matching across 18,000+ documents.",
-                "p3-d": "Built and compared artificial intelligence models for classification using Logistic Regression, AdaBoost and LSTM deep learning models.",
-                "p4-d": "Developed game with AI using Minimax algorithm with Alpha-Beta pruning and automated reasoning engines.",
-                "p5-d": "Designed a sustainability-focused trading platform for zero-money exchanges with full offline support.",
-                "p6-d": "All-in-one student app featuring Grade tracking, daily scheduling and interactive campus maps. Includes dual AI chatbots: one using RAG for document queries and one for JSON-based information retrieval.",
-                "cred-cert-title": "Certifications",
-                "cred-lang-title": "Languages",
-                "cert1-t": "Microsoft Azure Data Fundamentals (DP-900)",
-                "cert1-d": "Microsoft · 2025",
-                "cert2-t": "Seed for the Future Alumni",
-                "cert2-d": "Huawei · 2023",
-                "lang1-t": "Greek",
-                "lang1-d": "Native",
-                "lang2-t": "English",
-                "lang2-d": "C2 — Full Professional",
-                "ath-title": "Professional Athletics",
-                "ath-desc": "Parallel to my studies, I am a semi-professional Table Tennis player and coach. This background drives my discipline, competitive edge and ability to perform under pressure.",
-                "contact-title": "Contact",
-                "contact-desc": "Feel free to reach out via email or connect with me on LinkedIn and GitHub.",
-                "contact-email-label": "Email",
-                "contact-phone-label": "Phone",
-                "footer": "© 2026 Sokratis Giannoutsos. Professional Portfolio."
-            },
-            el: {
-                "nav-about": "Προφίλ",
-                "nav-services": "Υπηρεσίες",
-                "nav-projects": "Πρότζεκτς",
-                "nav-athletics": "Αθλητισμός",
-                "nav-contact": "Επικοινωνία",
-                "hero-name": "Σωκράτης-Βησσαρίων Γιαννούτσος",
-                "hero-desc": "Απόφοιτος Πληροφορικής του Οικονομικού Πανεπιστημίου Αθηνών. Τομείς ενδιαφέροντος μου ειναι η Ανάλυση και η Επιστήμη Δεδομένων, η Μηχανική Μάθηση και η ανάπτυξη εξατομικευμένων λογισμικών λύσεων.",
-                "btn-contact": "Επικοινωνήστε μαζί μου",
-                "edu-title": "Σπουδές",
-                "edu1-name": "Οικονομικό Πανεπιστήμιο Αθηνών",
-                "edu1-degree": "Πτυχίο Πληροφορικής — Βαθμός: 8.71/10",
-                "edu1-date": "Οκτώβριος 2022 – Ιούλιος 2026 · Αθήνα, Ελλάδα",
-                "edu2-name": "Πανεπιστήμιο Στοκχόλμης — Erasmus",
-                "edu2-degree": "Τμήμα Επιστήμης Υπολογιστών — Βαθμός: Β",
-                "edu2-date": "Ιανουάριος 2025 – Ιούνιος 2025 · Στοκχόλμη, Σουηδία",
-                "services-title": "Υπηρεσίες",
-                "s1-t": "Ιστοσελίδες & Διαδικτυακές Εφαρμογές",
-                "s1-d": "Εξατομικευμένες, γρήγορες και φιλικές προς κινητά λύσεις για επιχειρήσεις και ιδιώτες.",
-                "s2-t": "Διαχείριση Δεδομένων",
-                "s2-d": "Ενσωμάτωση και διαχείριση βάσεων δεδομένων, καθώς και σχεδιασμός αποδοτικών συστημάτων αναζήτησης.",
-                "s3-t": "Επιχειρηματική Ανάλυση",
-                "s3-d": "Μετατροπή ακατέργαστων δεδομένων σε αξιοποιήσιμα συμπεράσματα μέσω στατιστικής ανάλυσης και αναφορών.",
-                "projects-title": "Τεχνικά Πρότζεκτς",
-                "p1-d": "Έρευνα σχετικά με την πόλωση που σχετίζεται με τοξικότητα και προκατάληψεις σε σύγχρονα Μεγάλα Γλωσσικά Μοντέλα (LLMs), όπως τα GPT-4, Gemini και Llama.",
-                "p2-d": "Ανάπτυξη συστήματος υψηλής απόδοσης για αντιστοίχιση λέξεων-κλειδιών και εννοιολογική αναζήτηση σε περισσότερα από 18.000 έγγραφα.",
-                "p3-d": "Κατασκευή και αξιολόγηση μοντέλων τεχνητής νοημοσύνης για ταξινόμηση με χρήση Logistic Regression, AdaBoost και μοντέλων βαθιάς μάθησης LSTM.",
-                "p4-d": "Ανάπτυξη παιχνιδιού με τεχνητή νοημοσύνη και αλγορίθμο Minimax, κλάδεμα Alpha-Beta και μηχανές αυτοματοποιημένης συλλογιστικής.",
-                "p5-d": "Σχεδιασμός πλατφόρμας ανταλλαγής αντικειμένων χωρίς χρηματική συναλλαγή, με έμφαση στη βιωσιμότητα και πλήρη υποστήριξη εκτός σύνδεσης.",
-                "p6-d": "Ολοκληρωμένη εφαρμογή για φοιτητές με παρακολούθηση βαθμολογίας, ημερήσιο πρόγραμμα και διαδραστικούς χάρτες campus. Περιλαμβάνει δύο AI chatbots: ένα με αρχιτεκτονική RAG για ερωτήματα σε έγγραφα και ένα για ανάκτηση πληροφοριών βάσει JSON.",
-                "cred-cert-title": "Πιστοποιήσεις",
-                "cred-lang-title": "Γλώσσες",
-                "cert1-t": "Microsoft Azure Data Fundamentals (DP-900)",
-                "cert1-d": "Microsoft · 2025",
-                "cert2-t": "Seed for the Future Alumni",
-                "cert2-d": "Huawei · 2023",
-                "lang1-t": "Ελληνικά",
-                "lang1-d": "Μητρική γλώσσα",
-                "lang2-t": "Αγγλικά",
-                "lang2-d": "C2 — Άριστη γνώση",
-                "ath-title": "Αθλητική Καριέρα",
-                "ath-desc": "Παράλληλα με τις σπουδές μου, δραστηριοποιούμαι ως ημι-επαγγελματίας αθλητής και προπονητής Επιτραπέζιας Αντισφαίρισης. Αυτή η πορεία έχει διαμορφώσει την πειθαρχία μου, το ανταγωνιστικό μου πνεύμα και την ικανότητά μου να αποδίδω υπό πίεση.",
-                "contact-title": "Επικοινωνία",
-                "contact-desc": "Μη διστάσετε να επικοινωνήσετε μαζί μου μέσω email ή να με βρείτε στο LinkedIn και GitHub.",
-                "contact-email-label": "Email",
-                "contact-phone-label": "Τηλέφωνο",
-                "footer": "© 2026 Σωκράτης Γιαννούτσος. Επαγγελματικό Χαρτοφυλάκιο."
-            }
-        };
-
-        let currentLang = 'el';
-
-        function applyTranslations() {
-            document.getElementById('langBtn').innerText = currentLang === 'en' ? 'ΕΛΛΗΝΙΚΑ' : 'ENGLISH';
-            document.querySelectorAll('[data-key]').forEach(el => {
-                const key = el.getAttribute('data-key');
-                if (translations[currentLang][key]) {
-                    el.innerText = translations[currentLang][key];
-                }
-            });
-        }
-
-        function toggleLanguage() {
-            currentLang = currentLang === 'en' ? 'el' : 'en';
-            applyTranslations();
-        }
-
-        applyTranslations();
-    </script>
+<script>
+(function () {
+  var nodes = document.querySelectorAll('[data-el]');
+  nodes.forEach(function (n) { n.setAttribute('data-en', n.innerHTML); });
+  var btn = document.getElementById('lang');
+  function setLang(l) {
+    document.documentElement.lang = l;
+    nodes.forEach(function (n) { n.innerHTML = n.getAttribute(l === 'el' ? 'data-el' : 'data-en'); });
+    btn.textContent = l === 'el' ? 'EN' : 'ΕΛ';
+    try { localStorage.setItem('lang', l); } catch (e) {}
+  }
+  btn.onclick = function () { setLang(document.documentElement.lang === 'el' ? 'en' : 'el'); };
+  try { if (localStorage.getItem('lang') === 'el') setLang('el'); } catch (e) {}
+})();
+</script>
 </body>
 </html>
